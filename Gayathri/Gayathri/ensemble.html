@@ -1,0 +1,129 @@
+
+
+ <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<br>
+
+<h1 style="color:white;"> Mining Student data by Ensemble Classification and Clustering
+for Profiling and Prediction of Student Academic Performance</h1>
+                          
+  <br>
+  <br>
+							 <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">						
+							<h3 style="color:white;">1. Background </h3>
+							<p class="item-intro text-muted" style="font-size: 14px">
+							
+					         The objective of this paper is three-fold: to improve the quality of student data, to predict student
+academic performance and cluster groups of students with similar learning styles, using data mining
+techniques such as ensemble classification, anomaly detection and clustering. Ensemble methods have
+been called the most influential development in data mining and machine learning in the past decade.
+They combine multiple models usually producing an accurate model than the best of its individual
+components. 
+							</p>                          
+                      
+                           <h3 style="color:white;"> 2. Our Contributions </h3>
+                           <p class="item-intro text-muted" style="font-size: 14px">
+                          1. To use ensemble filtering on student data to improve the quality of the data, by eliminating mislabeled
+class noise. <br>
+2. To use ensemble classification to create a more accurate prediction of student performance in two
+different environments: high school and first year college data. <br>
+3. To use bootstrap averaged k-means clustering to identify groups of students with similar learning
+styles <br>
+
+                           </p>
+
+							<h3 style="color:white;">3. Methodology </h3>
+							<p class="item-intro text-muted" style="font-size: 14px">
+									<h4 style ="color:white;"> <p>  a. Ensemble Noise Filtering </p> </h4>
+									<p>
+
+									We focus on improving the quality of student academic
+training data by identifying and eliminating mislabeled instances by using multiple classifiers. An ensemble
+classifier detects noisy instances by constructing a set of classifiers (base level detectors).  
+<br>
+<br>
+
+<img src="C:\Users\Gayathri\Documents\portfolio\algorithm.PNG" width= "600">			
+<br>
+					   </p>
+								 
+								   <h4 style ="color:white;"> <p>  b. Bootstrapped averaging using k-means clustering  </p> </h4>
+
+								   <p>
+
+									Our approach builds multiple models by creating
+small bootstrap samples of the training set and building a model from each, but rather than aggregating
+like bagging, we average similar cluster centers to produce a single model that contains k clusters. To
+test the effectiveness of bootstrap averaging, we apply clustering in finding representative clusters of
+the population. 
+<br>
+<br>
+<img src="C:\Users\Gayathri\Documents\portfolio\algorithm2.PNG" width= "600">
+<br>
+								   </p>
+
+							<h3 style="color:white;"> 4. Dataset </h3>
+
+									<p class="item-intro text-muted" style="font-size: 14px">
+
+									<h4 style ="color:white;"> <p>  a. Student Performance Dataset (UCI) </p> </h4>
+										<p> This dataset is based on a study of data collected during the 2005-2006 school year from two public schools,
+from the Alentejo region of Portugal</p>
+
+<h4 style ="color:white;"> <p>  b. First year college student performance dataset </p> </h4>
+
+<p> First year Computer Systems Technology students from the New York City College of Technology
+(CUNY) enrolled in 6 different semesters (Fall 2013, Fall 2014, Fall 2015 Spring 2013, Spring 2014 and
+Spring 2015) taking an introductory computer systems course was used for this study</p>
+
+									</p>
+							<h3 style="color:white;"> 5. Our Results </h3>
+
+							<p class="item-intro text-muted" style="font-size: 14px">
+
+									<h4 style ="color:white;"> <p>  a. Accuracy </p> </h4>
+                                   <br>
+                                   <br>
+								    <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\accuracy.png" alt="" width="600">
+								  <br>
+								  <br>
+
+								  <h4 style ="color:white;"> <p>  b. Clustering </p> </h4>
+
+                                 <p> Before Clustering </p>
+                                 <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\before_clustering.png" alt="" width="400"> 
+                                 <br>
+                                 <br>
+                                 <p> After filtering the noisy data on the training set, we identify and cluster groups of students in the
+test set using k-means bootstrapped averaging. Once the instances are filtered, well
+defined clusters can be identified as shown  </p>
+                                 <p> After Clustering </p>
+                                 <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\after_clustering.png" alt="" width="400">
+
+							</p>
+                        	<p> This project has been published in a journal! Check it out   <a href="http://www.hofstra.edu/pdf/academics/colleges/seas/asee-fall-2016/asee-midatlantic-f2016-satyanarayana.pdf">here</a><p> 
+                        
+						
+						
+						
+						</div>
+						
+						
+						
+						<!-- <div class="modal-footer">
+							<button type="button" class="btn btn-default" href= "index.html">Close</button>
+						</div> -->
+ 
+                    </div>
+                </div>
+          </div>

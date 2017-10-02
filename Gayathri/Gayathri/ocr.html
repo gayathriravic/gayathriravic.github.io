@@ -1,0 +1,245 @@
+
+
+ <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<br>
+
+<h1 style="color:white;"> OCR Based Facilitator for the Visually Challenged  </h1>
+                          
+  <br>
+							 <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">						
+							<h3 style="color:white;">1. Background </h3>
+							<p class="item-intro text-muted" style="font-size: 14px">
+							
+					         There is a
+need for a portable text reader that is affordable, portable and readily available to the community. We propose a camera based
+framework built on the Raspberry Pi, integrated with Image processing algorithms, Optical Character Recognition (OCR) and
+Text to Speech (TTS) synthesis module. The camera module is used to capture an image of the printed text, and the image is then
+subject to pre-processing before being fed into the OCR. The pre-processing stage includes binarization, de-noising, de-skewing,
+segmentation and feature extraction. This paper addresses the integration of a complete Text Read-out system designed for the
+visually challenged. The OCR used in this project is Google Tesseract and the TTS employed is Pico.
+
+							</p>                          
+                      
+                           <h3 style="color:white;"> 2  System </h3>
+<p class="item-intro text-muted" style="font-size: 14px">
+                           The system consists of a camera interfaced with raspberry pi which accepts
+a page of printed text. The proposed system is simulated using OpenCV
+software. OCR is used to perform image to text conversion. A sample
+image converted with each pixel by pixel and pixels are converted to binary,
+and are then subject to de-skewing, thresholding, segmentation and feature
+extraction. Controller coding for the Raspberry pi is done through Python
+language. The audio output is obtained after the captured image is converted
+to text, through the help of a TTS synthesizer. Raspberry pi has an audio port
+where the output can be heard through the headphone or the speaker
+<br>
+<br>
+                           
+                          <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi.png" alt="" width="500">
+
+                           </p>
+
+							
+<h3 style="color:white;"><p>3. Communication Interfaces </p></h3>
+<p class="item-intro text-muted" style="font-size: 14px">
+<h4 style="color:white;"> <p> a. JTAG Header </p> </h4>
+The JTAG header is used as a debug port. Embedded
+systems developer relies on debuggers communicating with chips via
+the JTAG to perform operations like single stepping and break-pointing.
+<br> <br>
+<h4 style="color:white;"> <p> b. CSI Camera Connector </p> </h4>
+The Camera Serial Interface (CSI) specification
+is a standard interface between a camera and a host processor for
+mobile device applications.
+<br> <br>
+
+<h4 style="color:white;"> <p> c. DSI Display Connector </p></h4>
+The Display Serial Interface (DSI) is a speci-
+fication aimed at reducing the cost of display sub-systems in a mobile
+device. This is commonly targeted at LCD and similar display technologies.
+
+<br>
+<br>
+
+	<img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi.png" alt="" width="500">
+
+</p>
+<br>
+<br>
+
+
+							<h3 style="color:white;"><p>4. Design </p></h3>
+							
+                            <p class="item-intro text-muted" style="font-size: 14px">
+                            <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi4.png" alt="" width="400">
+							</p>
+                        	
+                        
+						
+						<h3 style="color:white;"><p>5. Implementation </p></h3>
+							
+                            <p class="item-intro text-muted" style="font-size: 14px">
+                            <h4 style="color:white;"> <p> a. Tesseract Optical Character Engine  </p> </h4>
+                           Tesseract is an optical character recognition engine for various operating systems. This converts typed or handwritten text from images into machine-encoded text.
+<br>
+<br>
+                            <h4 style="color:white;"> <p> b. Image Processing using OpenCV </p> </h4>
+                             The four categories of image
+processing methods include: <br>
+1. Pixel Brightness Transformations <br>
+2. Geometric Transformations <br>
+3. Pre-processing methods that use a local neighborhood of the processed 
+pixel <br>
+4. Image restoration <br>
+<br>
+                            <h4 style="color:white;"> <p> c. Python for Development </p> </h4>
+                            Python 3.1 <br><br>
+
+                            <h4 style="color:white;"> <p> d. Raspbian OS  </p> </h4>
+                            The operating system under which the proposed project is executed is Raspbian
+which is derived from the Debian operating system
+<br> <br>
+                            <h4 style="color:white;"> <p> e. Pico Text to Speech Engine</p> </h4>
+                             An intelligible text-to-speech program allows people
+with visual impairments or reading disabilities to listen to written words on
+a home computer.
+
+                            
+							</p>
+		<h3 style="color:white;"><p> 6. Image Processing Modules </p></h3>
+		 <p class="item-intro text-muted" style="font-size: 14px">
+
+		<h4 style="color:white;"> <p> a. Binarization </p> </h4>
+<xmp>
+def binarize(): binarize 
+(i) Convert the image to grayscale and flip the foreground and background
+to ensure foreground is now ”white” and the background is
+”black”
+(ii) Threshold the image setting all foreground pixels to 255 and background
+pixels to 0
+(iii) grab the (x, y) coordinates of all pixel values that are greater than
+zero, then use these coordinates to compute a rotated bounding box that
+contains all coordinates
+(iv) Return binarized image to rotate()
+</xmp> <br><br>
+
+<h4 style="color:white;"> <p> b. Image De-skew </p> </h4>
+<xmp> 
+
+def rotate() : de-skew image
+(i) The ‘cv2.minAreaRect‘ function returns values in the range [-90,
+0); as the rectangle rotates clockwise the returned angle trends to 0 – in
+this special case we need to add 90 degrees to the angle.
+(ii) Else, just the inverse of the angle to make it positive.
+(iii) Rotate the image to de-skew it.
+(iv) Draw the correction angle on the image for validation and return
+image to denoise()
+</xmp>
+<br><br>
+
+<h4 style="color:white;"> <p> c. De-noising Image </p> </h4>
+<xmp>
+
+def denoise() : de-noise image
+(i) Apply global threshold.
+(ii) Apply Otsus threshold.
+(iii) Apply Gaussian Blur
+(iv) Return de-noised image to segmentation()
+</xmp> <br><br>
+
+<h4 style="color:white;"> <p> c. Text Segmentation </p> </h4>
+<xmp>
+def segmentation() : segment text in image
+(i) Apply Adaptive Threshold.
+(ii) Apply dilation and erosion to join the gaps.
+(iii) Find contours in the image.
+(iv) For each contour, draw a bounding rectangle around it.
+</xmp>
+
+</p>
+
+
+
+<h3 style="color:white;"><p>7. Results </p></h3>
+							
+                            <p class="item-intro text-muted" style="font-size: 14px">
+<h4 style="color:white;"> <p> a. Binarization of Image </p> </h4>
+
+Original Image: <br><br>
+
+                        <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi5.png" alt="" width="300"> 	
+                        <br><br>
+Binarized Image <br>
+ <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi6.png" alt="" width="300">
+<br><br>
+
+<h4 style="color:white;"> <p> b. Skew Correction </p> </h4>
+
+Original Image: <br><br>
+
+                        <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi7.png" alt="" width="300"> <br><br>	
+De-skewed Image <br> <br>
+ <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi8.png" alt="" width="300">
+<br><br>
+
+
+<h4 style="color:white;"> <p> c. Noise Removal </p> </h4>
+
+Original Image: <br><br>
+
+                        <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi9.png" alt="" width="300"> <br><br>	
+De-noised Image <br> <br>
+ <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi10.png" alt="" width="300">
+<br><br>
+
+<h4 style="color:white;"> <p> d. Text Segmentation </p> </h4>
+
+Original Image: <br><br>
+
+                        <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi11.png" alt="" width="300"> <br><br>	
+Text and Character Segmentation <br> <br>
+ <img class="img-responsive img-centered" src="C:\Users\Gayathri\Documents\portfolio\rpi12.png" alt="" width="300">
+<br><br>
+
+						
+
+<h3 style="color:white;"><p>8. Conclusion </p></h3>
+<p class="item-intro text-muted" style="font-size: 14px">
+						In this research, we have described a prototype system to read printed text
+and hand held objects for assisting blind people. In this research, the camera
+acts as input for the paper. As the Raspberry Pi board is powered the camera
+starts streaming. When the object for label reading is placed in front of the
+camera then the capture button is clicked to provide image to the board. The
+detected image is pre-processed before sending to the OCR Engine. Using
+Tesseract library the image will be converted into data and the data detected
+from the image will be shown on the status bar. The obtained data will be
+pronounced through the ear phones using festival TTS Synthesis.
+The future scope of this project is promising. OCR Technologies can
+be applied to a number of applications such as invoice imaging, banking,
+optical music recognition, automatic number recognition, etc. The current
+system works for both Hindi and English scripts, however, we plan to extend
+these functionalities for other regional Indian scripts (e.g., Tamil, Kannada)
+in the near future.
+</p>
+
+						</div>
+						
+						
+						
+						<!-- <div class="modal-footer">
+							<button type="button" class="btn btn-default" href= "index.html">Close</button>
+						</div> -->
+ 
+                    </div>
+                </div>
+          </div>
